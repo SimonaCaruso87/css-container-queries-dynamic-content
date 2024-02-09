@@ -1,0 +1,25 @@
+.container {
+    /* Abilita il calcolo della dimensione dell'elemento */
+    container-type: size;
+    /* Stiamo definendo un tipo di contenitore di nome "container". */
+    container-name: container;
+  }
+  
+  .content::after {
+    /* Contenuto predefinito */
+    content: "👩‍🍳";
+  }
+  
+  /* Il contenitore ha un'altezza superiore a 50 px */
+  @container container (height > 50px) {
+    .content::after {
+      content: "🍊";
+    }
+  }
+  
+  /* Il contenitore ha un'altezza superiore a 240 px */
+  @container container (height > 240px) {
+    .content::after {
+      content: "🍰";
+    }
+  }
